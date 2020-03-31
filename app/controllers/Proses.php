@@ -6,12 +6,12 @@
 class Proses extends Controller
 {
 
-     /* ------------------------------> Tambah <--------------------------------- */
+   /* ------------------------------> Tambah <--------------------------------- */
 
-	public function addbuku()
-    {
+   public function addbuku()
+   {
         $add = $this->model('Proses_models')->addbuku($_POST);
-    	if ($add['status']){
+        if ($add['status']){
             Flasher::setFlash('Buku ', 'Berhasil Di Tambah','success');
             header('Location: '. BASEURL . '/buku/index');
             exit();
@@ -136,8 +136,8 @@ class Proses extends Controller
         }
     }
 
-     /* ------------------------------> Edit <--------------------------------- */
-    
+    /* ------------------------------> Edit <--------------------------------- */
+
     public function editbuku()
     {
         $add = $this->model('Proses_models')->editbuku($_POST);
@@ -236,4 +236,8 @@ class Proses extends Controller
         }
     }
 
+    public function kategori()
+    {
+        echo json_encode($this->model('Get_models')->ambilBukuBy('id_kategori',$_POST['id'],'tb_buku'));
+    }
 }
