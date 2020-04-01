@@ -41,6 +41,16 @@ class Get_models
             $this->db->bind($verificator, $value);
             return $this->db->single();
         }
+	}
+	
+	public function ambilkategoriby($verificator, $value, $tb)
+    {
+        if (isset($verificator) && isset($value)) {
+            $q = "SELECT * FROM $tb WHERE $verificator = :$verificator";
+            $this->db->query($q);
+            $this->db->bind($verificator, $value);
+            return $this->db->resultSet();
+        }
     }
 
     /*-------------------------------------> ambil buku <---------------------------------------*/
@@ -59,6 +69,7 @@ class Get_models
 		$this->db->query($query);
 		return $this->db->resultSet();
 	}
+	
 
 
 	/*-------------------------------------> ambil user <---------------------------------------*/
