@@ -8,7 +8,7 @@ PROJEK MVC PERPUSTAKAAN BY KELOMPOK 3
 2.I Wayan Wipram Sembah klan Gamurci <br>
 3.Kadek Dwipayana Putra <br>
 4.Made Wahyu Purnama Putra <br>
-5.Mohammad Tegar Asta Prakasa <br>
+5.Tegar<br>
 6.Tini Wahyuni <br>
 7.Nulia <br>
 8.Ni Luh Putu Jeni Andini <br>
