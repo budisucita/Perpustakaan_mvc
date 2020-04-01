@@ -69,6 +69,7 @@ class Get_models
 		$this->db->query($query);
 		return $this->db->resultSet();
 	}
+	
 
 
 	/*-------------------------------------> ambil user <---------------------------------------*/
