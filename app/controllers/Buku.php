@@ -10,6 +10,13 @@ class Buku extends Controller
 		if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
 			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
 		}else{
+			/*
+	         * 
+	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+	         * 
+	         * 
+	         * 
+	         */
 			$auth = $_SESSION['role'];
 			if ($auth == '1' || $auth == 1) {
 				$data['judul'] = "Daftar Buku";
@@ -43,6 +50,13 @@ class Buku extends Controller
 	//fungsi edit buku
 	public function edit_buku($id)
 	{
+		/*
+	    * 
+	    * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+		* 
+		* 
+		* 
+		*/
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 			$data['judul'] = "Edit Buku";
@@ -75,6 +89,13 @@ class Buku extends Controller
 	//fungsi menampilkan data detail buku 
 	public function detail_buku($id)
 	{
+		/*
+	    * 
+	    * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+		* 
+		* 
+		* 
+		*/
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 			$data['judul'] = "Detail Buku";
