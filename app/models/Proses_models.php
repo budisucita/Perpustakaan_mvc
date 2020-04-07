@@ -141,6 +141,7 @@ public function addUser($data)
   return ['status' => false, 'msg' => $e->getMessage()];
 } 
 }
+/*----------------------------> Tambah <-----------------------*/
 
 public function addJurusan($data)
 {
