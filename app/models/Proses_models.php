@@ -368,7 +368,7 @@ public function editbuku($data)
 }
 
 }
-
+/*------------------------> Edit <--------------*/
 public function edit_user($data)
 {
     $query = "UPDATE auth SET nama = :nama, nis = :nis, kelas = :kelas, id_jurusan = :id_jurusan WHERE id_auth = :id_auth";
@@ -420,7 +420,7 @@ public function edit_jurusan($data)
       return ['status' => false, 'msg' => $e->getMessage()];
   } 
 }
-
+/*-----------------> Selesai <-------------------*/
 public function selesai($id)
 {
     $query = "SELECT * FROM tb_pinjam WHERE id_pinjam = $id";
