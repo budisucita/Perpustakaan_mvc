@@ -14,11 +14,4 @@ class Home extends Controller
     	}
     }
 
-    public function logout()
-    {
-    	$_SESSION = [];
-    	session_unset();
-    	session_destroy();
-    	header('Location: '.BASEURL.'/home/page');
-    }
 }
