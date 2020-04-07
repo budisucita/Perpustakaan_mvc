@@ -15,7 +15,7 @@ class Database
    //koneksi database
    public function __construct()
    {
-   	//data source name
+   		//data source name
 		$dsn = "mysql:host={$this->host};
 				dbname={$this->db_name}";
 
@@ -61,26 +61,26 @@ class Database
 
    public function execute()
    {
-   	$this->stmt->execute();
+   		$this->stmt->execute();
    }
    public function resultSet()
    {
-   	$this->execute();
-   	return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+		$this->execute();
+		return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
    }
    public function single()
    {
-   	$this->execute();
-   	return $this->stmt->fetch(PDO::FETCH_ASSOC);
+   		$this->execute();
+   		return $this->stmt->fetch(PDO::FETCH_ASSOC);
    }
    public function resultarray()
    {
-    $this->execute();
-    return $this->stmt->fetchColumn();
+		$this->execute();
+		return $this->stmt->fetchColumn();
    }
    public function rowCount()
    {
-    return $this->stmt->rowCount();
+		return $this->stmt->rowCount();
    }
 
 
