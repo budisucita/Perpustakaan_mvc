@@ -9,8 +9,8 @@ class Proses extends Controller
      /* ------------------------------> Tambah <--------------------------------- */
 
 	public function addbuku()
-    {
-        $add = $this->model('Proses_models')->addbuku($_POST);
+   	{
+       	$add = $this->model('Proses_models')->addbuku($_POST);
     	if ($add['status']){
             Flasher::setFlash('Buku ', 'Berhasil Di Tambah','success');
             header('Location: '. BASEURL . '/buku/index');
