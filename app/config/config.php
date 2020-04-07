@@ -1,6 +1,6 @@
 <?php  
 
-define('BASEURL', 'http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/public');
+define('BASEURL', 'http://localhost/Perpustakaan_mvc/public');
 
 //DB
 define('DB_HOST', 'localhost');
