@@ -41,6 +41,16 @@ class Get_models
             $this->db->bind($verificator, $value);
             return $this->db->single();
         }
+	}
+	
+	public function ambilkategoriby($verificator, $value, $tb)
+    {
+        if (isset($verificator) && isset($value)) {
+            $q = "SELECT * FROM $tb WHERE $verificator = :$verificator";
+            $this->db->query($q);
+            $this->db->bind($verificator, $value);
+            return $this->db->resultSet();
+        }
     }
 
     /*-------------------------------------> ambil buku <---------------------------------------*/
@@ -59,8 +69,7 @@ class Get_models
 		$this->db->query($query);
 		return $this->db->resultSet();
 	}
-
-
+	
 	/*-------------------------------------> ambil user <---------------------------------------*/
 
 	public function ambilUser()
@@ -102,7 +111,7 @@ class Get_models
 		$query = "SELECT * FROM tb_kembali
 				  INNER JOIN tb_buku ON tb_kembali.id_buku  = tb_buku.id_buku
 				  INNER JOIN auth ON tb_kembali.id_auth = auth.id_auth
-                  INNER JOIN tb_jurusan ON tb_kembali.id_jurusan = tb_jurusan.id_jurusan";
+                  INNER JOIN tb_jurusan ON auth.id_jurusan = tb_jurusan.id_jurusan";
 		$this->db->query($query);
 		return $this->db->resultSet();
 	}
@@ -125,8 +134,8 @@ class Get_models
     {
     	$query = "SELECT * FROM tb_pinjam 
     			  INNER JOIN auth ON tb_pinjam.id_auth = auth.id_auth
-    			  INNER JOIN tb_buku ON tb_pinjam.id_buku = tb_buku.id_buku
-    			  INNER JOIN tb_jurusan ON tb_pinjam.id_jurusan = tb_jurusan.id_jurusan WHERE id_pinjam = :id";
+                  INNER JOIN tb_jurusan ON auth.id_jurusan = tb_jurusan.id_jurusan
+    			  INNER JOIN tb_buku ON tb_pinjam.id_buku = tb_buku.id_buku WHERE id_pinjam = :id";
     	$this->db->query($query);
     	$this->db->bind('id',$id);
     	return $this->db->single();
