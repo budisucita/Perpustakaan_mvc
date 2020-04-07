@@ -9,5 +9,6 @@ class Kategori extends Controller
 		$this->view('perpustakaan/kategori/index',$data);
 	}
 
-
 }
+
+?>

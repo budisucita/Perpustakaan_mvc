@@ -18,7 +18,7 @@ class Proses_models extends Controller
 
         $destination = "img/daftar-buku/"; // simpen dmana nantik
 
-        $file = $_FILES['gambar'];
+        $file = $_FILES['gambar'];//disimpan di gambar
 
 
         $filename = explode(".", $file["name"]); 

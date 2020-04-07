@@ -70,8 +70,6 @@ class Get_models
 		return $this->db->resultSet();
 	}
 	
-
-
 	/*-------------------------------------> ambil user <---------------------------------------*/
 
 	public function ambilUser()
