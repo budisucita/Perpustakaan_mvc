@@ -30,6 +30,7 @@ class Buku extends Controller
 		
 	}
 
+	//fungsi menampilkan categori
 	public function kategori()
 	{
 		$data['judul'] = "Daftar Kategori";
@@ -39,6 +40,7 @@ class Buku extends Controller
 		$this->view('template/footer');
 	}
 
+	//fungsi edit buku
 	public function edit_buku($id)
 	{
 		$auth = $_SESSION['role'];
@@ -59,6 +61,7 @@ class Buku extends Controller
 		}
 	}
 
+	//fungsi edit kategori buku
 	public function edit_kategori($id)
 	{
 		$data['judul'] = "Edit Kategori";
@@ -69,6 +72,7 @@ class Buku extends Controller
 		$this->view('template/footer');
 	}
 
+	//fungsi menampilkan data detail buku 
 	public function detail_buku($id)
 	{
 		$auth = $_SESSION['role'];
