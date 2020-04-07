@@ -1,9 +1,14 @@
 <?php 
-  $login =$_SESSION['status'];
-  $role = $_SESSION['role'];
-  if ($login != 'ada' && $role !== '1') {
+
+  /*
+  /
+  / #ini berguna untuk menyeleksi apakah user itu udha login dan user bukan role admin dna user
+  /
+  /
+   */ 
+  if ($_SESSION['status'] != 'ada' && $_SESSION['role'] !== '1') {
     header('Location: '.BASEURL.'/home/page');
-  }elseif ($login != 'ada' && $role !== '2') {
+  }elseif ($_SESSION['status'] != 'ada' && $_SESSION['role'] !== '2') {
     header('Location: '.BASEURL.'/home/page');
   }
 ?>
