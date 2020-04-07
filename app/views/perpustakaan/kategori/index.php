@@ -4,26 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>User | Skensa</title>
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'> 
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
 	<!-- <link  rel="stylesheet" type="text/css" href="<?= BASEURL ?>/vendor/fontawesome-free/css/all.min.css"> -->
 	<link rel="stylesheet" href="<?= BASEURL ?>/css/style.css">
 	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/css/style_card.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow user-nav">
-		<!-- Topbar Navbar -->
+		<!-- Navbar -->
 		<div class="mr-auto">
 			<h1>Skensa</h1>
 		</div>
 		<ul class="navbar-nav ml-auto">
 			<div class="topbar-divider d-sm-block"></div>
 			<li class="nav-item">
-				<span class="mr-2 text-gray-600 small">Wahyu Purnama</span>
-				<img class="img-profile rounded-circle" src="<?= BASEURL ?>//img/wahyu.jpg">
+				<span class="mr-2 text-gray-600 small">Wipram Gamurci</span>  <!-- Wipram Ganteng hehe -->
+				<img class="img-profile rounded-circle" src="<?= BASEURL ?>//img/wahyu.jpg">  <!-- foto belum ada, masih pake fotonya wahyu -->
 			</li>
 		</ul>
 	</nav>
-	
+
 	<div class="content anim-typewriter-content">
 		<h1>Library Perpustakaan</h1>
 	</div>
@@ -37,9 +37,9 @@
 
 						<div class="header-card">
 							<div class="date">
-								<span class="day">12</span>
-								<span class="month">Aug</span>
-								<span class="year">2016</span>
+								<span class="day">07</span>
+								<span class="month">Apr</span>
+								<span class="year">2020</span>
 							</div>
 							<ul class="menu-content">
 								<li>
