@@ -106,6 +106,7 @@ public function addUser($data)
     $password = $data['password'];
     $password_konf = $data['password_konf'];
 
+    //untuk mengecek username
     $queryu = "SELECT username FROM auth WHERE username = '$username'";
     $this->db->query($queryu);
     $cek_username = $this->db->single();
@@ -440,6 +441,11 @@ public function selesai($id)
     $tanggal_pinjam = strtotime($data['tanggal_pinjam']);
     $tanggal_kembali = strtotime($data['tanggal_kembali']);
     $harus_kembali = strtotime($date);
+    /*
+    / ini sistem untuk kembali dan mengatur denda
+    /
+    /
+    */
         // var_dump($tanggal_kembali);var_dump($harus_kembali);die;
     $selisih = $harus_kembali -  $tanggal_kembali ;
         // var_dump($selisih);die;
@@ -488,7 +494,7 @@ public function selesai($id)
 
          /**
          * 
-         * 1. kita kita select untuk update buku lama
+         * 1. kita  select untuk update buku lama
          * 
          * 
          * 
