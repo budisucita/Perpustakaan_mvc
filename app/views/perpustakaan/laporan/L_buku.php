@@ -1,4 +1,5 @@
-  <div class="container-fluid">
+ <!-- Start Container -->
+ <div class="container-fluid">
    <div class="d-flex justify-content-between t-scale">
     <div class="">
          <a href="<?= BASEURL ?>/laporan">
@@ -16,11 +17,13 @@
     </div>
         
     </div>
+    <!-- Start Card -->
     <div class="card shadow mb-4">
 
      <div class="card-body">
           
             <div class="table-responsive">
+                <!-- Start Table -->
                 <table class="table table-striped table-bordered mydatatable" style="width: 100%;">
                     <thead>
                         <tr >
@@ -53,7 +56,7 @@
             </div>
         </div>
     </div>
-    </div>   
+ </div>   
 <!-- Modal -->
 <div class="modal fade" id="rangetanggal" tabindex="-1" role="dialog" aria-labelledby="judul" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -66,21 +69,20 @@
             </div>
             <div class="modal-body">
                 <form action="<?= BASEURL ?>/laporan/cetak" method="POST" target="_blank">
-                <div class="form-grup">
-                    <label for="tgl_awal" >Tanggal Awal</label>
-                    <input type="date" class="form-control" id="tgl_awal" name="tgl_awal">
-                </div>
-                <br>
-                <div class="form-grup">
-                    <label for="tgl_akhir" >Tanggal Akhir</label>
-                    <input type="date" class="form-control" id="tgl_akhir" name="tgl_akhir">
-                </div>
+                        <div class="form-grup">
+                            <label for="tgl_awal" >Tanggal Awal</label>
+                            <input type="date" class="form-control" id="tgl_awal" name="tgl_awal">
+                        </div>
+                        <br>
+                        <div class="form-grup">
+                            <label for="tgl_akhir" >Tanggal Akhir</label>
+                            <input type="date" class="form-control" id="tgl_akhir" name="tgl_akhir">
+                        </div>
             </div>
             <div class="modal-footer">
-                    <button type="submit" name="submit" class="btn btn-primary w-100">Cetak Laporan &nbsp;<i class="fas fa-print"></i></button>
+            <button type="submit" name="submit" class="btn btn-primary w-100">Cetak Laporan &nbsp;<i class="fas fa-print"></i></button>
             </div>
-            </form>
-
+                    </form>
         </div>
     </div>
 </div>
