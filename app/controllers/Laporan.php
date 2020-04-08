@@ -8,6 +8,13 @@ class Laporan extends Controller {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
 			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
 		}
+			/*
+	         * 
+	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+	         * 
+	         * 
+	         * 
+	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Generate Laporan";
@@ -25,6 +32,14 @@ class Laporan extends Controller {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
 			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
 		}
+
+			/*
+	         * 
+	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+	         * 
+	         * 
+	         * 
+	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Laporan Buku";
@@ -44,6 +59,14 @@ class Laporan extends Controller {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
 			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
 		}
+
+			/*
+	         * 
+	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+	         * 
+	         * 
+	         * 
+	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Laporan Buku";
@@ -64,6 +87,14 @@ class Laporan extends Controller {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
 			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
 		}
+
+			/*
+	         * 
+	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
+	         * 
+	         * 
+	         * 
+	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Laporan ";
