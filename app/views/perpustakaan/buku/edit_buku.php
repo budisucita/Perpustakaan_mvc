@@ -44,6 +44,10 @@
                                    <?php elseif ($data['buku']['kondisi_buku']  == "Rusak"): ?>
                                       <option value="Rusak">Rusak</option> 
                                       <option value="Baik">Baik</option>
+                                    <?php elseif ($data['buku']['kondisi_buku']  == ""): ?>
+                                      <option value="">Pilih Kondisi</option>
+                                      <option value="Rusak">Rusak</option> 
+                                      <option value="Baik">Baik</option>
                                 <?php endif ?>
                                
                            </select>
