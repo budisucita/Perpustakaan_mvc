@@ -1,6 +1,6 @@
  <div class="container-fluid">
     
-  <!-- add buku -->
+  <!-- Add Buku -->
     <div class="d-flex justify-content-end t-scale">
         <a data-toggle="modal" data-target="#buku">
             <button class="btn btn-primary mb-3 shadow-lg">Tambah Jurusan &nbsp;<i class="fas fa-plus"></i></button>
@@ -64,4 +64,5 @@
 
         </div>
     </div>
-</div> 
+</div>
+<!-- Penutup Modal  -->
