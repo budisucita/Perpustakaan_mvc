@@ -5,12 +5,13 @@
 class Homepage_user extends Controller
 {
     
-	public function index()
+	
+	public function detail($id)
 	{
-		$data['buku'] = $this->model('Get_models')->ambilBuku();
-		$data['kategori'] = $this->model('Get_models')->ambilKategori();
-		$this->view('template/user/index',$data);
+		$data['buku']=
+		$this->model('Get_models')->ambilDetailbukuby('id_buku','$id','tb_buku');
+		$this->view('template/user/header');
+		$this->view('perpustakaan/home_user/detail',$data);
+		$this->view('template/user/footer');
 	}
-
-
 }
