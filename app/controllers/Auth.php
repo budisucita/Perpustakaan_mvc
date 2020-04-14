@@ -4,11 +4,13 @@
 
 class Auth extends Controller
 {
-    public function login(){
+    //fungsi Login
+	public function login(){
     	$data['judul'] = "Login";
 		$this->view('perpustakaan/login/login',$data);
     }
     
+	//fungsi Logout
     public function logout()
     {
     	$_SESSION = [];

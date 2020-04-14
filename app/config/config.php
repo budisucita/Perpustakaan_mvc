@@ -1,8 +1,9 @@
 <?php  
 
 
-=======
-define('BASEURL', 'http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/public%27);
+
+define('BASEURL', 'http://localhost/Perpustakaan_mvc/public%27');
+
 
 
 //DB

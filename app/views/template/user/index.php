@@ -9,10 +9,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style_card.css">
 </head>
 <body>
+	
 	<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow user-nav">
 		<!-- Topbar Navbar -->
 		<div class="mr-auto">
-			<h1>Skensa</h1>
+			<div class="search">
+		<form>
+			<input type="search" placeholder="Search">
+		</form>
+	</div>
 		</div>
 		<ul class="navbar-nav ml-auto">
 			<div class="topbar-divider d-sm-block"></div>
@@ -26,6 +31,9 @@
 	<div class="content anim-typewriter-content">
 		<h1>Library Perpustakaan</h1>
 	</div>
+
+	
+	
 	<div class="row row-card">
 		<?php foreach ($data['buku'] as $buku): ?>
 			<div class="col-lg-4 ">
