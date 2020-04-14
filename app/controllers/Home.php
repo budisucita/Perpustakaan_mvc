@@ -4,8 +4,7 @@
 
 class Home extends Controller
 {
-    // fungsi menampilkan Page setelah login
-	public function page(){
+    public function page(){
 
     	if ( !isset($_POST['login']) ) {
     		$data['judul'] = "Home | Perpustakaan Skensa";

@@ -3,8 +3,8 @@
 </div>
 
 <div class="flex">
-	<div class="img">
-		<img src="<?= BASEURL ?>/img/bg.jpg" alt="">
+	<div class="img ">
+		<img src="<?= BASEURL ?>/img/daftar-buku/<?= $data['buku']['gambar'] ?>" alt="" >
 	</div>
 	<div class="deskripsi">
 		<table>
@@ -35,3 +35,4 @@
 		</table>
 	</div>
 </div>
+<br><br>

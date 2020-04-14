@@ -90,10 +90,13 @@ a {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
-
 .row-card {
-  padding-top: 10rem;
+  padding-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .card-user {
   padding: 0 1.7rem;
   width: 430px;
@@ -310,10 +313,10 @@ ul.menu-content{
 }
 
 .search input[type=search] {
-  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-  border: solid 1px #ccc;
+  background: transparent url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  border: solid 2px #9898;
   padding: 9px 10px 9px 32px;
-  width: 55px;
+  width: 200px;
   
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
@@ -324,13 +327,9 @@ ul.menu-content{
   transition: all .5s;
 }
 .search input[type=search]:focus {
-  width: 130px;
+  width: 250px;
   background-color: #fff;
-  border-color: #66CC75;
-  
-  -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-  -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-  box-shadow: 0 0 5px rgba(109,207,246,.5);
+  box-shadow: 5px 5px 15px rgba(0,0,0,.2);
 }
 
 .search input:-moz-placeholder {
@@ -338,4 +337,32 @@ ul.menu-content{
 }
 .search input::-webkit-input-placeholder {
   color: #999;
+}
+.row-card .container-tags a {
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #989898;
+}
+.row-card .container-tags a.tag {
+  display: block;
+  padding: 0.1em 0.85em;
+  margin: 0.5em;
+  text-transform: uppercase;
+  border: 2px solid rgba(0,0,0,.4);
+  border-radius: 2em;
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, -0.45);
+}
+.row-card .container-tags a.tag:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right, #3498db, #3498);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.row-card .container-tags .tags {
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }

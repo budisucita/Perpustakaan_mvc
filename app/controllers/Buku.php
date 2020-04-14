@@ -8,7 +8,7 @@ class Buku extends Controller
 	{
 		// var_dump($_SESSION['role']);die;
 		if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}else{
 			/*
 	         * 

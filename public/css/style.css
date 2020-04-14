@@ -1772,18 +1772,18 @@ small, .small {
 	overflow: hidden;
 	color: #fff;
 	position: absolute;
-	top: 10%;
+	top: 8%;
 	font-size: 1.2em;
 	left: 50%;
 	transform:translate(-50%,50%);
 
 }
 .anim-typewriter-content{
-	animation: typewriter 4s steps(40) 1s infinite normal both,
+	animation: typewriterr 4s steps(40) 1s infinite normal both,
 	blinkTextcontet 500ms steps(40) infinite normal;
 }
 
-@keyframes typewriter{
+@keyframes typewriterr{
 	0%{
 		width: 0;
 	}
@@ -1802,4 +1802,39 @@ small, .small {
 	to{
 		border-right-color:transparent;
 	}
+}
+.mt-3{
+  margin-top: 2em;
+}
+.flex{
+	padding:0 2rem;
+	padding-top: 3rem;
+	display: flex;
+	flex-direction: row;
+
+}
+.flex .img {
+	flex-basis: 50%;
+	padding-right: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex .img img{
+	width: 60%;
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+}
+.flex .deskripsi{
+	flex-basis: 50%;
+	padding-left: .5rem;
+}
+.judul-detail{
+	padding-top: 5rem;
+	text-align: center;
+}
+.judul-detail h1{
+	font-family: 'Lobster';
+	font-size: 4rem;
+	color: #333;
 }

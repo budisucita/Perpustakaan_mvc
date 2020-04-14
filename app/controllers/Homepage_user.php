@@ -4,7 +4,7 @@
 
 class Homepage_user extends Controller
 {
-    
+
 	public function index()
 	{
 		$data['buku'] = $this->model('Get_models')->ambilBuku();
@@ -21,6 +21,6 @@ class Homepage_user extends Controller
 		$this->view('perpustakaan/home_user/detail',$data);
 		$this->view('template/user/footer');
 	}
-	
-	
+
+
 }

@@ -1,9 +1,7 @@
 <?php  
 
 
-
-define('BASEURL', 'http://localhost/Perpustakaan_mvc/public%27');
-
+define('BASEURL', 'http://localhost/Perpustakaan_mvc/public');
 
 
 //DB

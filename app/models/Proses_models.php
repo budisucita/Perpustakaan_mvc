@@ -47,7 +47,6 @@ class Proses_models extends Controller
                    if( move_uploaded_file($file['tmp_name'], $destination.$fileNewName) ){
                         // masukkan data ke database 
 
-                        //query insert data
                       $query = "INSERT INTO tb_buku VALUES ('', :nama_buku, :pengarang, :id_kategori, :deskripsi, :gambar, :jumlah_buku, :tanggal_masuk ,:kondisi_buku)";
                       try{
                         $this->db->query($query);
@@ -84,7 +83,6 @@ class Proses_models extends Controller
 
 public function addkategori($data)
 {
-  //query insert data
   $query = "INSERT INTO tb_kategori VALUES ('', :kategori, :kode)";
   try{
       $this->db->query($query);
@@ -99,10 +97,8 @@ public function addkategori($data)
   } 
 }
 
-
 public function addUser($data)
 {
-    //query insert data
     date_default_timezone_set('Asia/Kuala_Lumpur');
     $date = date('Y-m-d');
     $username = strtolower(stripcslashes($data['username']));
@@ -127,7 +123,6 @@ public function addUser($data)
        exit();
    }
 
-//query insert data
    $query =  "INSERT INTO auth VALUES ('',:nama , :nis, :kelas, :username, :password, :id_level, :id_jurusan, '$date')";
    try{
     $this->db->query($query);
@@ -147,7 +142,7 @@ public function addUser($data)
 } 
 }
 /*----------------------------> Tambah <-----------------------*/
-//query insert data
+
 public function addJurusan($data)
 {
     $query = "INSERT INTO tb_jurusan VALUES ('', :jurusan)";
@@ -162,7 +157,7 @@ public function addJurusan($data)
       return ['status' => false, 'msg' => $e->getMessage()];
   } 
 }
-//query insert data
+
 public function addPinjam($data)
 {
     $id = $data['buku'];
@@ -373,7 +368,7 @@ public function editbuku($data)
 }
 
 }
-/*------------------------> Edit <--------------*/
+
 public function edit_user($data)
 {
     $query = "UPDATE auth SET nama = :nama, nis = :nis, kelas = :kelas, id_jurusan = :id_jurusan WHERE id_auth = :id_auth";
@@ -425,7 +420,7 @@ public function edit_jurusan($data)
       return ['status' => false, 'msg' => $e->getMessage()];
   } 
 }
-/*-----------------> Selesai <-------------------*/
+
 public function selesai($id)
 {
     $query = "SELECT * FROM tb_pinjam WHERE id_pinjam = $id";

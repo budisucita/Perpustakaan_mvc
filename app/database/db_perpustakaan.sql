@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Mar 2020 pada 03.22
--- Versi server: 10.4.6-MariaDB
--- Versi PHP: 7.3.9
+-- Waktu pembuatan: 14 Apr 2020 pada 03.19
+-- Versi server: 10.3.16-MariaDB
+-- Versi PHP: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -37,7 +37,7 @@ CREATE TABLE `auth` (
   `password` varchar(255) NOT NULL,
   `id_level` int(11) NOT NULL,
   `id_jurusan` int(11) NOT NULL,
-  `tanggal_masuk` date NOT NULL DEFAULT current_timestamp()
+  `tanggal_masuk` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `tb_buku` (
   `deskripsi` text NOT NULL,
   `gambar` varchar(50) NOT NULL,
   `jumlah_buku` int(11) NOT NULL,
-  `tanggal_masuk` date NOT NULL DEFAULT current_timestamp(),
+  `tanggal_masuk` date NOT NULL,
   `kondisi_buku` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -74,7 +74,8 @@ CREATE TABLE `tb_buku` (
 INSERT INTO `tb_buku` (`id_buku`, `nama_buku`, `pengarang`, `id_kategori`, `deskripsi`, `gambar`, `jumlah_buku`, `tanggal_masuk`, `kondisi_buku`) VALUES
 (90, 'Stranger Things: The sound of the Upside Down', 'Jane Doe', 9, 'The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.', 's0.97058500 1585204179.jpg', 35, '2020-03-26', 'Baik'),
 (91, 'Joker', 'Todd Phillips', 9, 'In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a.', 'M0.20106500 1585204363.jpg', 1, '2020-03-26', 'Baik'),
-(92, 'laptop', 'sadas', 8, 'asdddddddddddddddddddd', 't0.87455900 1585472941.jpg', 12, '2020-03-29', 'Baik');
+(92, 'laptop', 'sadas', 8, 'asdddddddddddddddddddd', 't0.87455900 1585472941.jpg', 12, '2020-03-29', 'Baik'),
+(94, 'laptop', '213', 9, 'saddddddddddddddddddddd', 't0.51434000 1586355426.jpg', 21312, '2020-03-31', 'Baik');
 
 -- --------------------------------------------------------
 
@@ -172,7 +173,7 @@ CREATE TABLE `tb_pinjam` (
   `id_pinjam` int(11) NOT NULL,
   `id_auth` int(11) NOT NULL,
   `id_buku` int(11) NOT NULL,
-  `tanggal_pinjam` date NOT NULL DEFAULT current_timestamp(),
+  `tanggal_pinjam` date NOT NULL,
   `tanggal_kembali` date NOT NULL,
   `lama_pinjam` int(11) NOT NULL,
   `denda` int(11) NOT NULL
@@ -274,7 +275,7 @@ ALTER TABLE `auth`
 -- AUTO_INCREMENT untuk tabel `tb_buku`
 --
 ALTER TABLE `tb_buku`
-  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_jurusan`

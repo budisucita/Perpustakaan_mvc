@@ -18,7 +18,7 @@
 				<div class="logo">
 					<h1>Skensa</h1>
 				</div>
-				<nav>
+				<nav class="mt-1" style="margin-top: 1rem;">
 					<ul>
 						<li><a href="#" class="underline">Home</a></li>
 						<li><a href="#" class="underline">Buku</a></li>
@@ -29,7 +29,7 @@
 						<button onclick="closeleft()"><i class="fas fa-times" ></i></button>
 					</div>
 				</nav>
-				<nav>
+				<nav class="mt-1" style="margin-top: 1rem;">
 					<ul>
 						<li class="login"><a href="#popup">Login <img src="<?= BASEURL ?>/img/asset/login 1.png" alt="" width="20px"></a></li>
 					</ul>

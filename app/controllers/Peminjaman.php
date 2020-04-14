@@ -7,15 +7,8 @@ class Peminjaman extends Controller
 	public function index()
 	{
 		if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 			$data['judul'] = "Peminjaman";
@@ -41,16 +34,8 @@ class Peminjaman extends Controller
     public function detail($id)
     {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
     	$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	    	$data['judul'] =  "Detail Peminjam";
@@ -70,16 +55,8 @@ class Peminjaman extends Controller
     public function edit_pinjam($id)
     {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	    	$data['judul'] =  "Edit Peminjam";

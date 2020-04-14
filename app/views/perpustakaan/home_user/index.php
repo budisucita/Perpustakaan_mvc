@@ -1,7 +1,8 @@
-<div class="content anim-typewriter-content">
+
+	<div class="content anim-typewriter-content">
 		<h1>Library Perpustakaan</h1>
 	</div>
-
+	
 	<div class="row-card">
 		<div class="container-tags">
 			<p class="tags">
@@ -17,7 +18,7 @@
 			<div class="col-lg-4 ">
 				<?php $img_b =$buku['gambar']; ?>
 				<div class="example-2 card-user mt-3">
-					<div class="wrapper-card" style="background:url('http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/public/img/daftar-buku/<?php echo $img_b ?>') center/cover no-repeat; ">
+					<div class="wrapper-card" style="background:url('http://perpustakaan.com/Perpustakaan_mvc/public/img/daftar-buku/<?php echo $img_b ?>') center/cover no-repeat; ">
 						<div class="header-card">
 							<div class="date">
 								<span class="day">12</span>
@@ -44,3 +45,5 @@
 				</div>
 			</div>
 		<?php endforeach ?>
+
+	

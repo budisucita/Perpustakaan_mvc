@@ -5,7 +5,7 @@
             <button class="btn btn-primary mb-3 shadow-lg">Pinjam Buku &nbsp;<i class="fas fa-plus"></i></button>
         </a>
     </div>
- <!-- Wilayah Tabel Daftar Peminjam Yang Sudah Melakukan Pengisian Form -->
+ <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-book"></i> &nbsp;Daftar Pinjam</h6>
@@ -45,10 +45,9 @@
             </div>
         </div>
     </div>
-    <!-- Penutup Wilayah Tabel Daftar Peminjam Yang Sudah Melakukan Pengisian Form -->
 </div>
 
-<!-- Modal Pinjam Buku -->
+<!-- Modal -->
 <div class="modal fade" id="buku" tabindex="-1" role="dialog" aria-labelledby="judul" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -126,5 +125,4 @@
 
         </div>
     </div>
-</div>
-<!-- Penutup Modal Pinjam Buku --> 
+</div> 

@@ -10,9 +10,7 @@
 
             <div class="card-body ">
                  <form action="<?= BASEURL ?>/proses/edit_user" method="POST" enctype="multipart/form-data">
-                    <!-- Wilayah Form Edit Usernya -->
                     <input type="hidden" id="id" name="id" value="<?= $data['user']['id_auth'] ?>">
-                    
                     <div class="form-group">
                         <label for="nama">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama" value="<?= $data['user']['nama'] ?>">
@@ -22,9 +20,7 @@
                        <label for="nis">Nis</label>
                        <input type="text" class="form-control" id="nis" name="nis" value="<?= $data['user']['nis'] ?>">
                     </div>
-
                     <div class="form-group">
-                    <!-- Wilayah Untuk Mengetahui Kelas Atau Levelnya -->
                        <label for="kelas">Kelas</label>
                         <select name="kelas" id="kelas" class="form-control">
                             <?php if ($data['user']['kelas']  == "X") :?>
@@ -49,11 +45,8 @@
                                    <option value="XII">XII</option>
                             <?php endif; ?>
                         </select>
-                    <!-- Penutup Wilayah Untuk Mengetahui Kelas Atau Levelnya -->
                     </div>
-
                     <div class="form-group">
-                    <!-- Wilayah Untuk Mengetahui Jurusan Yang Sudah Dibuat -->
                        <label for="jurusan">Jurusan</label>
                         <select name="jurusan" id="jurusan" class="form-control">
                             <option value="">Pilih Jurusan</option>
@@ -63,16 +56,11 @@
                                 </option>
                             <?php endforeach ?>
                         </select>
-                    <!-- Penutup Wilayah Untuk Mengetahui Jurusan Yang Sudah Dibuat -->
                     </div>
-
             </div>
-
                 <div class="modal-footer">
                         <button type="submit" name="submit" class="btn btn-primary w-100">Edit User &nbsp;<i class="fas fa-plus"></i></button>
                 </div>
-
-                <!-- Penutup Wilayah Form Edit Usernya -->
                 </form>
             </div>
         </div>

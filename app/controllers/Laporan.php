@@ -4,19 +4,10 @@ class Laporan extends Controller {
     public function __construct() {
         $this->db = new Database;
     }
-	
-	// fungsi tampilan Index
     public function index() {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Generate Laporan";
@@ -30,20 +21,10 @@ class Laporan extends Controller {
 	        $this->view('template/petugas/footer');
 		}
     }
-	
-	// fungsi tampilan buku
     public function buku() {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Laporan Buku";
@@ -61,16 +42,8 @@ class Laporan extends Controller {
     }
     public function user() {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Laporan Buku";
@@ -86,20 +59,11 @@ class Laporan extends Controller {
 	        $this->view('template/petugas/footer');
 		}
     }
-	
-	// fungsi tampilan peminjaman
+
     public function peminjaman() {
     	if (empty($_SESSION['role']) || $_SESSION['role'] == "") {
-			header('Location: http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/app/views/template/404.php');
+			header('Location: http://perpustakaan.com/Perpustakaan_mvc/app/views/template/404.php');
 		}
-
-			/*
-	         * 
-	         * 1. kita  cek apa user itu rolenya admin  = 1 atau user = 2
-	         * 
-	         * 
-	         * 
-	         */
 		$auth = $_SESSION['role'];
 		if ($auth == '1' || $auth == 1) {
 	        $data['judul'] = "Laporan ";
@@ -115,8 +79,7 @@ class Laporan extends Controller {
 	        $this->view('template/petugas/footer');
 		}
     }
-	
-	//fungsi mencetak data
+
     public function cetak() {
         $query = "SELECT * FROM tb_buku 
 				  INNER JOIN tb_kategori ON tb_buku.id_kategori = tb_kategori.id_kategori";
@@ -205,8 +168,7 @@ class Laporan extends Controller {
         $mpdf->WriteHTML($html);
         $mpdf->Output("Daftar-buku.pdf", \Mpdf\Output\Destination::INLINE);
     }
-	
-	//fungsi mencetak data user
+
     public function cetak_user() {
        $query = "SELECT * FROM auth
 				  INNER JOIN tb_jurusan ON auth.id_jurusan =  tb_jurusan.id_jurusan
@@ -298,8 +260,7 @@ class Laporan extends Controller {
         $mpdf->WriteHTML($html);
         $mpdf->Output("Daftar-user.pdf", \Mpdf\Output\Destination::INLINE);
     }
-	
-	// funsgi mencetak
+
     public function cetak_peminjaman() {
       	$query = "SELECT * FROM tb_kembali
 				  INNER JOIN tb_buku ON tb_kembali.id_buku  = tb_buku.id_buku

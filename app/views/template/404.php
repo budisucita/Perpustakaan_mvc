@@ -156,7 +156,7 @@
 				</div>
 				<h2>404 - Page not found</h2>
 				<p> Halaman yang Anda Cari mungkin telah dihapus namanya diubah atau sementara tidak tersedia.</p>
-				<a href="http://perpustakaan.com/projek_perpustakaan/Perpustakaan_mvc/public">Go To Homepage</a>
+				<a href="http://perpustakaan.com/Perpustakaan_mvc/public">Go To Homepage</a>
 			</div>
 		</div>
 
