@@ -99,8 +99,10 @@ public function addkategori($data)
   } 
 }
 
+
 public function addUser($data)
 {
+    //query insert data
     date_default_timezone_set('Asia/Kuala_Lumpur');
     $date = date('Y-m-d');
     $username = strtolower(stripcslashes($data['username']));
