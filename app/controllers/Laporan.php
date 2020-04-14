@@ -85,7 +85,7 @@ class Laporan extends Controller {
 				  INNER JOIN tb_kategori ON tb_buku.id_kategori = tb_kategori.id_kategori";
         $this->db->query($query);
         $data = $this->db->resultSet();
-        require_once 'C:\xampp\htdocs\projek_perpustakaan\Perpustakaan_mvc\public/vendor/vendor/autoload.php';
+        require_once 'C:\xampp\htdocs\Perpustakaan_mvc\public/vendor/vendor/autoload.php';
         $html = '
 			<!DOCTYPE html>
 			<html lang="en">
@@ -175,7 +175,7 @@ class Laporan extends Controller {
 				  INNER JOIN tb_level ON auth.id_level = tb_level.id_level";
 		$this->db->query($query);
 		$data = $this->db->resultSet();
-        require_once 'C:\xampp\htdocs\projek_perpustakaan\Perpustakaan_mvc\public/vendor/vendor/autoload.php';
+        require_once 'C:\xampp\htdocs\Perpustakaan_mvc\public/vendor/vendor/autoload.php';
         $html = '
 			<!DOCTYPE html>
 			<html lang="en">
@@ -268,7 +268,7 @@ class Laporan extends Controller {
                   INNER JOIN tb_jurusan ON tb_kembali.id_jurusan = tb_jurusan.id_jurusan";
 		$this->db->query($query);
 		$data = $this->db->resultSet();
-        require_once 'C:\xampp\htdocs\projek_perpustakaan\Perpustakaan_mvc\public/vendor/vendor/autoload.php';
+        require_once 'C:\xampp\htdocs\Perpustakaan_mvc\public/vendor/vendor/autoload.php';
         $html = '
 			<!DOCTYPE html>
 			<html lang="en">
